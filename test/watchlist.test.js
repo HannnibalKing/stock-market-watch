@@ -1,0 +1,1 @@
+const test=require('node:test');const assert=require('node:assert/strict');const {watchlist}=require('../server');test('watchlist symbols are unique and priced',()=>{assert.equal(new Set(watchlist.map(q=>q.symbol)).size,watchlist.length);assert.ok(watchlist.every(q=>q.price>0));});
